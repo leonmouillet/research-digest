@@ -2,7 +2,7 @@
 # Edit this file to customize your digest
 
 # Your email address
-email: "your.email@example.com"
+email: "leonard.mouillet@psemail.eu"
 
 # Email delivery method
 # Options: "print" (just preview, no email) or "gmail" (send via Gmail)
@@ -14,32 +14,34 @@ frequency: "weekly"
 
 # Your research interests - the more detailed, the better the filtering
 research_interests: |
-  You are a research assistant filtering papers for a [PhD student/Professor/Postdoc]
-  working on [YOUR FIELD, e.g., political economy, development economics, labor economics].
+  You are a research assistant filtering papers for a PhD student
+  working on public economics.
 
   PRIMARY RESEARCH QUESTIONS:
-  - [Be very specific: What causal relationships are you studying?]
-  - [What mechanisms or theories are you testing or building?]
-  - [What policy questions motivate your research?]
-
+  - What are the trends in income and wealth inequalities in both developped and developping countries?
+  - How are these trends influenced by political institutions such as fiscal system, 
+  financial system, labor market institutions, monetary policies? 
+  - Which notions and mechanisms could be used to go beyond the sole description of
+  inequalities ? Exploitation ? Domination ? Competition ? Political fights? 
+  
   CORE TOPICS & KEYWORDS:
-  - [List specific concepts, NOT general field names]
-  - [Include synonyms and related terms the literature uses]
-  - [Mention specific contexts: countries, time periods, institutions, populations]
+  - Income and wealth inequalities, Distributional National Accounts, Distributional Financial Accounts, income mobility 
+  - Tax incidence, tax incentives, income shifting, elasticties and cross-elasticities of income with respect to tax rates,
+  tax evasion, tax systems, tax progressivity, billionaires taxation, labor market regulations
+  - Exploitation, domination, capitalism, social classes
 
   METHODOLOGICAL PREFERENCES:
-  - Identification strategies I use: [e.g., DID, RDD, IV, event studies, structural models]
-  - Data types I work with: [e.g., administrative data, surveys, text, spatial data, experiments]
-  - Techniques I'm learning: [e.g., machine learning for causal inference, text analysis, network analysis]
+  - New data bases, matched data bases, descriptive work, administrative data, fiscal data, survey data, matched employer-employee data
+  - Difference in differences
+  - Machine learning for data treatment, matching models for combining data sets
 
   HIGH PRIORITY - Include papers that:
   - Directly address my research questions or mechanisms
   - Use similar methods or data that I could adapt
-  - Study similar contexts, populations, or institutions
   - Offer methodological innovations relevant to my approach
-  - Present credible causal identification (not just correlations)
   - Challenge conventional wisdom in my area
   - Provide novel measurement strategies for hard-to-observe concepts
+  - Build bridges between different feilds and discplines, e.g. connect "orthodox" and "heterodox" economics
 
   MEDIUM PRIORITY - Also include papers that:
   - Study adjacent topics that could inform my work
@@ -48,16 +50,18 @@ research_interests: |
   - Present relevant theoretical frameworks
 
   EXCLUDE - Skip papers that:
-  - Are purely theoretical without empirical tests or applications
   - Focus on completely unrelated fields, topics, or outcomes
-  - Use only descriptive statistics without credible identification
   - Study contexts so different they offer no transferable insights
   - Are methodological papers about techniques I'll never use
 
-  EXAMPLES OF RELEVANT RECENT PAPERS (optional but helpful):
-  - [Author Year: Brief title - explain why this is relevant to you]
-  - [This helps me understand your taste and what "close" means]
-
+  EXAMPLES OF RELEVANT RECENT PAPERS:
+  - Kleven, H. J., & Schultz, E. A. (2014). Estimating Taxable Income Responses Using Danish Tax Reforms. American Economic Journal: Economic Policy, 6(4), 271‑301. https://www.jstor.org/stable/43189411
+  - Bittmann, S. & Lojkine, U., (2025) “The Chains of Exploitation: A Theoretical and Empirical Exploration”, Theory and Social Inquiry 1(2), 1-34. doi: https://doi.org/10.16995/tsi.17541
+  - Blanchet, T., Saez, E., & Zucman, G. (2022). Real-Time Inequality (Working Paper No. 30229). National Bureau of Economic Research. https://doi.org/10.3386/w30229
+  - Bozio, A., Breda, T., Grenet, J., & Guillouzouic, A. (2025). Does Tax-Benefit Linkage Matter for the Incidence of Payroll Taxes? The Review of Economic Studies, rdaf059. https://doi.org/10.1093/restud/rdaf059
+  - Saez, E., & Zucman, G. (2023). Distributional Tax Analysis in Theory and Practice : Harberger Meets Diamond-Mirrlees (Working Paper No. 31912). National Bureau of Economic Research. https://doi.org/10.3386/w31912
+  - Balkir, A. S., Saez, E., Yagan, D., & Zucman, G. (2025). How Much Tax Do US Billionaires Pay? Evidence from Administrative Data (Working Paper No. 34170). National Bureau of Economic Research. https://doi.org/10.3386/w34170
+  
   TONE: Be selective. Quality over quantity. I'd rather get 5 perfect papers than 15 mediocre ones.
 
 # RSS Feeds to monitor
@@ -73,9 +77,11 @@ feeds:
   - name: "CEPR Discussion Papers"
     url: "https://cepr.org/content/discussion-papers-rss-feed"
 
-  # Add more feeds here:
-  # - name: "Your Source"
-  #   url: "https://example.com/feed"
+  - name: "Cairn - Economie"
+    url: "https://shs.cairn.info/rss/discipline/1/all"
+
+  - name: "Cairn - Sociologie"
+    url: "https://shs.cairn.info/rss/discipline/11/all"
 
 # Advanced settings
 max_papers: 15  # Maximum papers in each digest

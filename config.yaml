@@ -6,7 +6,7 @@ email: "leonard.mouillet@psemail.eu"
 
 # Email delivery method
 # Options: "print" (just preview, no email) or "gmail" (send via Gmail)
-email_method: "print"
+email_method: "gmail"
 
 # How often to receive digest
 # Options: "weekly" or "biweekly"

@@ -28,7 +28,6 @@ jobs:
       - name: Generate and send digest
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_CREDENTIALS_JSON: ${{ secrets.GMAIL_CREDENTIALS_JSON }}
         run: |
           python digest.py

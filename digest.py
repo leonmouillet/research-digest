@@ -210,44 +210,32 @@ def send_email(html_content, config):
         return
 
     elif email_method == 'gmail':
-        from google.oauth2.service_account import Credentials
-        from googleapiclient.discovery import build
-        import base64
+        # Gmail SMTP
+        sender_email = os.environ.get('GMAIL_ADDRESS')
+        sender_password = os.environ.get('GMAIL_APP_PASSWORD')
 
-        creds_json = os.environ.get("GMAIL_CREDENTIALS_JSON")
-        if not creds_json:
-            raise ValueError("Missing GMAIL_CREDENTIALS_JSON in environment variables.")
-
-        # Charge creds depuis JSON en mémoire
-        import json
-        creds_info = json.loads(creds_json)
-
-        creds = Credentials.from_service_account_info(
-            creds_info,
-            scopes=["https://www.googleapis.com/auth/gmail.send"]
-        )
-
-        service = build("gmail", "v1", credentials=creds)
+        if not sender_email or not sender_password:
+            raise ValueError("Gmail credentials not found. Set GMAIL_ADDRESS and GMAIL_APP_PASSWORD in secrets.")
 
         msg = MIMEMultipart('alternative')
         msg['Subject'] = f"Research Digest - {datetime.now().strftime('%Y-%m-%d')}"
-        msg['From'] = creds_info["client_email"]
+        msg['From'] = sender_email
         msg['To'] = config['email']
 
         html_part = MIMEText(html_content, 'html')
         msg.attach(html_part)
 
-        raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
-
         try:
-            service.users().messages().send(
-                userId='me',
-                body={'raw': raw}
-            ).execute()
+            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
+                server.login(sender_email, sender_password)
+                server.send_message(msg)
             print(f"Email sent successfully to {config['email']}")
         except Exception as e:
             print(f"Failed to send email: {e}")
             raise
+
+    else:
+        raise ValueError(f"Unknown email method: {email_method}. Use 'print' or 'gmail'")
 
 
 def main():

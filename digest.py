@@ -67,13 +67,11 @@ PAPERS TO REVIEW:
 OUTPUT FORMAT:
 For each selected paper, provide:
 
-### [Paper Number]. Paper Title
+### Title (Authors)
 
 **Source:** [Journal/Working Paper Series]
 
-**Why this matters:** [2-3 sentences explaining the paper's relevance to the researcher's work. Be specific - reference their research questions, methods, or contexts. Explain what they can learn or adapt from this paper.]
-
-**Key findings:** [2-3 sentences on the main empirical results, methodology, or theoretical contribution. Focus on actionable insights.]
+**Abstract:** [Full Paper Abstract]
 
 **Link:** [Full URL]
 
@@ -81,14 +79,10 @@ For each selected paper, provide:
 
 CRITICAL INSTRUCTIONS:
 - Quality over quantity: It's better to return 5 exceptional papers than 15 mediocre ones
-- Be ruthless: Only include papers that directly advance their research agenda
-- Prioritize papers with strong identification strategies and novel contributions
-- Skip papers that are tangentially related or merely descriptive
 - For each paper, think: "Would I email this to them if I were their research assistant?"
 - Order papers by relevance (most relevant first)
 - If fewer than {max_papers} papers meet the high bar, that's okay - only return the truly valuable ones
 
-Begin your response with a brief 1-sentence summary of the overall quality and themes of this week's papers, then list the selected papers.
 """
 
     response = model.generate_content(prompt)
